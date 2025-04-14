@@ -33,8 +33,8 @@ public class StorageServiceImpl implements StorageService {
     }
 
     @Override
-    public int StorageCount() {
-        return storageMapper.storageCount();
+    public int StorageCount(int storeId) {
+        return storageMapper.storageCount(storeId);
     }
 
     @Override

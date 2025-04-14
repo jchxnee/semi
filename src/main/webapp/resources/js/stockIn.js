@@ -488,6 +488,13 @@ document.getElementById("stock-submit-btn").addEventListener("click", function (
     const expDate = document.getElementById("expected-date").value;
     const storageNo = document.getElementById("storage-search-bar").value;
 
+    // 테이블 행 존재 여부 검사
+    const tableRows = document.querySelectorAll("#stockIn-table tbody tr");
+    if (tableRows.length === 0) {
+        alert("상품을 선택해주세요.");
+        return;
+    }
+
     // 테이블 행들 가져오기
     document.querySelectorAll("#stockIn-table tbody tr").forEach(row => {
         const productNo = row.getAttribute("data-product-no");

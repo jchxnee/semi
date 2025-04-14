@@ -131,7 +131,7 @@ public class ManagerController {
         int storeId = (int) session.getAttribute("storeId");
 
         // 페이징바 처리 코드
-        int listCount = storageService.StorageCount();
+        int listCount = storageService.StorageCount(storeId);
         int pageLimit = 5;     // 하단에 보여질 페이징 바 수
         int boardLimit = 10;   // 한 페이지에 보여질 입고처 수
         model.addAttribute("pageUrl", "storage.lo");

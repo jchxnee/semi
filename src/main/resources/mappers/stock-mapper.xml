@@ -282,11 +282,17 @@
         JOIN MEMBER M ON S.STOCK_EMP = M.EMP_NO
         JOIN MEMBER LOGIN_USER ON LOGIN_USER.EMP_NO = #{empNo}
         WHERE S.STATUS IN ('Y', 'C')
-        AND S.STOCK_STATUS LIKE 'STOCK_OUT%'
+        AND S.STOCK_STATUS LIKE 'STOCK_IN%'
         AND S.STOCK_STATUS LIKE 'STOCK_IN%'
         AND M.STORE_ID = LOGIN_USER.STORE_ID
         <if test="status != null and status != '' and status != '전체'">
             AND S.STOCK_STATUS = #{status}
+        </if>
+        <if test="startDate != null and startDate != ''">
+            AND STOCK_DATE BETWEEN #{startDate}
+        </if>
+        <if test="endDate != null and endDate != ''">
+            AND #{endDate}
         </if>
     </select>
 

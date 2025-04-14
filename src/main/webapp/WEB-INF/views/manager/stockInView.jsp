@@ -400,7 +400,6 @@
 
                     </table>
                     <div class="pagination">
-                        <!-- 이전 버튼 -->
                         <c:choose>
                             <c:when test="${pi.currentPage == 1}">
                                 <a href="#" class="disabled">이전</a>

@@ -41,6 +41,7 @@
     <select id="storageCount" resultType="int">
         SELECT COUNT(*)
         FROM STORAGE
+        WHERE STORE_ID = #{storeId}
     </select>
 
     <select id="selectStorageList" resultMap="storageResult">

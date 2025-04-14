@@ -66,7 +66,8 @@
         P.COLOR AS color,
         P.PRODUCT_SIZE AS productSize,
         P.STOCK_IN_PRICE AS stockInPrice,
-        P.STOCK_OUT_PRICE AS stockOutPrice
+        P.STOCK_OUT_PRICE AS stockOutPrice,
+        P.IMAGE_URL AS imageUrl
         FROM PRODUCT P
         JOIN CATEGORY C ON P.CATEGORY_NO = C.CATEGORY_NO
         WHERE P.PRODUCT_NAME LIKE '%' || #{productName} || '%'
