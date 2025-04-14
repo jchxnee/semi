@@ -233,7 +233,10 @@
                 </div>
                 <div class="card-body">
                 </div>
+
+                <a href="/list.bo" style="text-decoration: none; color: black;">
                 <div class="card-footer">피드백 확인</div>
+                </a>
             </div>
 
 
