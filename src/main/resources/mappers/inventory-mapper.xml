@@ -84,7 +84,8 @@
         WHERE S.STOCK_STATUS IN ('STOCK_IN_COMPLETED', 'STOCK_OUT_COMPLETED')
             AND M.STORE_ID = #{storeId}
         <if test="startDate != null and startDate != '' and endDate != null and endDate != ''">
-            AND S.STOCK_DATE BETWEEN TO_DATE(#{startDate}, 'YYYY-MM-DD') AND TO_DATE(#{endDate}, 'YYYY-MM-DD')
+            AND S.STOCK_DATE BETWEEN TO_DATE(#{startDate}, 'YYYY-MM-DD')
+            AND TO_DATE(#{endDate} || ' 23:59:59', 'YYYY-MM-DD HH24:MI:SS')
         </if>
         <if test="keyword != null and keyword != ''">
             AND P.PRODUCT_NAME LIKE '%' || #{keyword} || '%'

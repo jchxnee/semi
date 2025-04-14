@@ -397,6 +397,19 @@
     });
   }
 
+  const startDateInput = document.getElementById("start-date");
+  const endDateInput = document.getElementById("end-date");
+
+  startDateInput.addEventListener("change", function () {
+    const startDate = startDateInput.value;
+    endDateInput.min = startDate;
+
+    // 만약 end-date가 start-date보다 이전이면 비워버리기
+    if (endDateInput.value < startDate) {
+      endDateInput.value = "";
+    }
+  });
+
 
     //입출고리스트 불러오기
 
