@@ -45,7 +45,7 @@ git clone https://github.com/jchxnee/semi.git
 
 | 이름 | 담당 기능 | Contact |
 | --- | --- | --- |
-| 김현아 | 회원가입//창고/입출고 | haha020911@naver.com |
-| 박지민 | BE | a1@gmail.com |
-| 이주찬 | FE | hyeijoo1234@naver.com |
+| 김현아 | 회원가입/창고/입고처관리/입출고 | haha020911@naver.com |
+| 박지민 | 제품관리/재고관리/매출관리/대시보드 | jimin@naver.com |
+| 이주찬 | 직원승인/로그인/마이페이지/출퇴근/근태관리/매출 및 재고 반영 | hyeijoo1234@naver.com |
 | 황동준 | 공지사항/매출 현황/대시보드 | nikihwangg@naver.com |
